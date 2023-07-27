@@ -1,4 +1,8 @@
 
+/**
+ * MINIMIZE 
+ */
+
 //Minimize Main Window
 let isMainMinimized = false;
 let minMainButton = document.getElementById("minimize-main");
@@ -35,18 +39,18 @@ minInnerButton.addEventListener('click', () => {
     }
 });
 
+/**
+ * CLOSE
+ */
+
 //Close the main window
-let isMainClosed = false;
 let closeMainButton = document.getElementById("close-main");
 closeMainButton.addEventListener('click', () => {
     let mainWindow = document.getElementById("main-window");
     if(mainWindow !== undefined) {
-        console.log("close main");
         mainWindow.classList.add("closed");
+        addEasterEgg();
     }
-
-    isMainClosed = !isMainClosed;
-    addEasterEgg();
 });
 
 //If main window is closed, add easter egg window
@@ -75,3 +79,51 @@ function addEasterEgg() {
         }
     }
 }
+
+//Close inner window
+let closeInnerButton = document.getElementById("inner-close");
+closeInnerButton.addEventListener('click', () => {
+    let innerWindow = document.getElementById("inner-window");
+    if(innerWindow !== undefined) innerWindow.classList.add("closed");
+});
+
+
+/**
+ * MAXIMIZE
+ */
+
+//Maximize the main window
+let isMainMaxed = false;
+let maxMainButton = document.getElementById("maximimze-main");
+maxMainButton.addEventListener("click", () => {
+    let mainWindow = document.getElementById("main-window");
+
+    if(mainWindow !== undefined) {
+        
+        if(!isMainMaxed) {
+            mainWindow.classList.add("maxed");
+        }
+        else {
+            mainWindow.classList.remove("maxed");
+        }
+
+        isMainMaxed = !isMainMaxed;;
+    }
+});
+
+//Maximize inner window
+let isInnerMaxed = false;
+let maxInnerButton = document.getElementById("inner-maximize");
+maxInnerButton.addEventListener("click", () => {
+    let innerWindow = document.getElementById("inner-window");
+    if(innerWindow !== undefined) {
+
+        if(!isInnerMaxed) {
+            innerWindow.classList.add("maxed");
+        } else {
+            innerWindow.classList.remove("maxed");
+        }        
+
+        isInnerMaxed = !isInnerMaxed;
+    }
+})
