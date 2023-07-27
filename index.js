@@ -57,6 +57,7 @@ const easterEggWindowHtml = `
         </div>
         <div class="window-body">
             <h2>Congrats! You found one of the easter eggs scattered around this site! </h2>
+            <p> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Click Here </a> for your reward!</p>
         </div>
     </div>
 `
@@ -64,7 +65,13 @@ const easterEggWindowHtml = `
 function addEasterEgg() {
     let easterEggDiv = document.getElementById("easter-egg-div");
 
-    if(easterEggDiv !== undefined) {
-     easterEggDiv.innerHTML += easterEggDiv;
+    if (easterEggDiv !== undefined) {
+
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = easterEggWindowHtml;
+
+        while(tempDiv.firstChild) {
+            easterEggDiv.appendChild(tempDiv.firstChild);
+        }
     }
 }
