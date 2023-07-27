@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Turf - Manga</title>
+
+    <!-- <link href="./styles.css" rel="stylesheet" type="text/css" media="all"> -->
+    <link href="./manga-styles.css" rel='stylesheet' type="text/csss" media="all" >
+    <link href="./styles.css" rel="stylesheet" type="text/css" media="all" >
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+</head>
+<body>
+    <!-- nav bar -->
+   <div class="my-navbar">
+    
+    <a href="./index.html">
+      <button class="active nav-button">Home</button>
+    </a>
+
+    <a href="./manga.html">
+      <button class="nav-button">Manga</button>
+    </a>
+
+    <a href="./anime.html">
+      <button class="nav-button">Anime</button>
+    </a>
+
+    <a href="./pokemonCards.html">
+      <button class="nav-button">Pokemon Cards</button>
+    </a>
+   </div>
+   
+   <br>
+
+   <div class="window">
+    <div class="title-bar">
+        <div class="title-bar-text">Manga</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize" id="minimize-btn"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <h1> test</h1>
+    </div>
+   </div>
+
+   <script>
+    const btn = document.getElementById("minimize-btn");
+    const windowElement = document.querySelector('.window-body');
+
+    btn.addEventListener('click', () => {
+        console.log("clicked!");
+        windowElement.classList.add('minimized');
+    })
+
+   </script>
+
+</body>
+</html>

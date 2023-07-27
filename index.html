@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Turf</title>
+
+    <link href="./styles.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  </head>
+  <body>
+   <!-- nav bar -->
+   <div class="my-navbar">
+    
+    <a href="./index.html">
+      <button class="active nav-button">Home</button>
+    </a>
+
+    <a href="./manga.html">
+      <button class="nav-button">Manga</button>
+    </a>
+
+    <a href="./anime.html">
+      <button class="nav-button">Anime</button>
+    </a>
+
+    <a href="./pokemonCards.html">
+      <button class="nav-button">Pokemon Cards</button>
+    </a>
+   </div>
+   
+   <br>
+
+    <div id="main-window" class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Astro Turf</div>
+            <div class="title-bar-controls">
+                <button id="minimize-main" aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button id="close-main" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body" id="main-window-body">
+            <h3 class="my-window-text">Welcome to <div style="color:purple;">Astro Turf</div> my <a href="https://neocities.org">Neocities</a> page.</h3>
+            <br>
+            <div class="window">
+              <div class="title-bar">
+                <div class="title-bar-text">About Me</div>
+                <div class="title-bar-controls">
+                  <button id="inner-minimize" aria-label="Minimize"></button>
+                  <button aria-label="Maximize"></button>
+                  <button aria-label="Close"></button>
+              </div>
+              </div>
+              <div class="window-body" id="inner-window-body">
+                  <p>Astro Turf is a man of many hobbies. Computing, Hockey, Tennis, Video Games, Pokemon Card Collecting, Anime, Reading, Hardcore Punk, and Skateboarding. 
+                    Just to name a few.</p>
+                    
+                  <p>He is a Senior Software Engineer in Birmingham, Alabama where he writes predominately Java and dreams of the 
+                  day his company switches to dotNet and C#. Or Java adopts Linq. Both are equally unlikely to happen. </p>
+
+                  <p>Asto Turf is a strong unbeliever in <a href="https://birdsarentreal.com/">birds</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="easter-egg-div">
+
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
