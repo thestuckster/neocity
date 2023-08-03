@@ -17,11 +17,11 @@
    <div class="my-navbar">
     
     <a href="./index.html">
-      <button class="active nav-button">Home</button>
+      <button class="nav-button">Home</button>
     </a>
 
     <a href="./manga.html">
-      <button class="nav-button">Manga</button>
+      <button class="nav-button active">Manga</button>
     </a>
 
     <a href="./anime.html">
@@ -39,26 +39,70 @@
     <div class="title-bar">
         <div class="title-bar-text">Manga</div>
         <div class="title-bar-controls">
-            <button aria-label="Minimize" id="minimize-btn"></button>
+            <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
             <button aria-label="Close"></button>
         </div>
     </div>
-    <div class="window-body">
-        <h1> test</h1>
+    <div id="manga-window" class="window-body">
+        <h1>Manga</h1>
+        <p>Astro-turf is a big manga fan. Starting in late middle school he discovered the art form and has been hooked ever since.
+        Below is a list of some of his favorite manga.</p>
+
+        <div id="berserk-window" class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Berserk</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help"></button>
+                    <button id="berserk-close" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>Placeholder</p>
+            </div>
+        </div>
+
+        <div id="hellsing-window" class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Hellsing</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help"></button>
+                    <button id="hellsing-close" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>Placeholder</p>
+            </div>
+        </div>
+
+        <div id="yu-yu-hakusho-window" class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Yu Yu Hakusho</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help"></button>
+                    <button id="yu-yu-hakusho-close" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>Placeholder</p>
+            </div>
+        </div>
+
+        <div id="rosario-vampire-window" class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Rosario Vampire</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help"></button>
+                    <button id="rosario-vampire-close" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>Placeholder</p>
+            </div>
+        </div>
     </div>
    </div>
 
-   <script>
-    const btn = document.getElementById("minimize-btn");
-    const windowElement = document.querySelector('.window-body');
-
-    btn.addEventListener('click', () => {
-        console.log("clicked!");
-        windowElement.classList.add('minimized');
-    })
-
-   </script>
-
+    <script src="manga.js"></script>
 </body>
 </html>
