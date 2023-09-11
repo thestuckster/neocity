@@ -1,4 +1,3 @@
-
 /**
  * MINIMIZE 
  */
@@ -60,7 +59,7 @@ const easterEggWindowHtml = `
             <div class="title-bar-text">Easter Egg 1</div>
         </div>
         <div class="window-body">
-            <h2>Congrats! You found one of the easter eggs scattered around this site! </h2>
+            <h2>Congrats! You found an Easter egg!</h2>
             <p> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Click Here </a> for your reward!</p>
         </div>
     </div>
@@ -107,7 +106,7 @@ maxMainButton.addEventListener("click", () => {
             mainWindow.classList.remove("maxed");
         }
 
-        isMainMaxed = !isMainMaxed;;
+        isMainMaxed = !isMainMaxed;
     }
 });
 
